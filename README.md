@@ -42,9 +42,9 @@ XGBClassifier(n_estimators=500, learning_rate=0.05, eval_metric='auc')
 
 <br>
 
-#### 실험 1. `max_depth` & `min_child_weight`
+#### 실험 1. max_depth & min_child_weight
 
-| 실험 | max_depth | min_child_weight | ROC AUC |
+|  | max_depth | min_child_weight | ROC AUC |
 | --- | --- | --- | --- |
 | 1-1 | 5 | 4 | 0.8441 |
 | 1-2 | 5 | 5 | 0.8456 |
@@ -57,9 +57,9 @@ XGBClassifier(n_estimators=500, learning_rate=0.05, eval_metric='auc')
 
 <br>
 
-#### 실험 2. `colsample_bytree`
+#### 실험 2. colsample_bytree
 
-| 실험 | colsample_bytree | ROC AUC |
+|  | colsample_bytree | ROC AUC |
 | --- | --- | --- |
 | 2-1 | 0.60 | 0.8464 |
 | 2-2 | 0.65 | **0.8469** |
@@ -71,9 +71,9 @@ XGBClassifier(n_estimators=500, learning_rate=0.05, eval_metric='auc')
 
 <br>
 
-#### 실험 3. `learning_rate` & `n_estimators`
+#### 실험 3. learning_rate & n_estimators
 
-| 실험 | learning_rate | n_estimators | ROC AUC |
+|  | learning_rate | n_estimators | ROC AUC |
 | --- | --- | --- | --- |
 | 3-1 | 0.05 | 500 | 0.8468 |
 | 3-2 | 0.03 | 700 | 0.8464 |
@@ -109,6 +109,7 @@ XGBClassifier(
 #### 1. HyperOpt 기반 튜닝 결과
 
 ```python
+# Best params from HyperOpt
 {
     'n_estimators': 500,
     'learning_rate': 0.0594,
@@ -122,9 +123,9 @@ XGBClassifier(
 
 <br>
 
-#### 실험 1. `max_depth`
+#### 실험 1. max_depth
 
-| 실험 | max_depth | ROC AUC |
+|  | max_depth | ROC AUC |
 | --- | --- | --- |
 | 1-1 | 115 | 0.8423 |
 | 1-2 | 50 | 0.8423 |
@@ -137,9 +138,9 @@ XGBClassifier(
 
 <br>
 
-#### 실험 2. `num_leaves`
+#### 실험 2. num_leaves
 
-| 실험 | num_leaves | ROC AUC |
+|  | num_leaves | ROC AUC |
 | --- | --- | --- |
 | 2-1 | 38 | 0.8430 |
 | 2-2 | 64 | 0.8424 |
@@ -152,9 +153,9 @@ XGBClassifier(
 
 <br>
 
-#### 실험 3. `subsample`
+#### 실험 3. subsample
 
-| 실험 | subsample | ROC AUC |
+|  | subsample | ROC AUC |
 | --- | --- | --- |
 | 3-1 | 0.82 | 0.8437 |
 | 3-2 | 0.90 | 0.8437 |
@@ -165,9 +166,9 @@ XGBClassifier(
 
 <br>
 
-#### 실험 4. `learning_rate` 미세 조정
+#### 실험 4. learning_rate
 
-| 실험 | learning_rate | ROC AUC |
+|  | learning_rate | ROC AUC |
 | --- | --- | --- |
 | 4-1 | 0.0594 | **0.8443** |
 | 4-2 | 0.06 | 0.8414 |
@@ -198,7 +199,7 @@ LGBMClassifier(
 
 ## 결론
 
-| Model | ROC AUC | 최종 설정 |
+| Model | ROC AUC | 주요 설정 |
 | --- | --- | --- |
 | XGBoost | 0.8471 | max_depth=6, learning_rate=0.06, colsample_bytree=0.65 |
 | LightGBM | 0.8443 | max_depth=30, learning_rate=0.0594, num_leaves=37 |
@@ -223,6 +224,6 @@ LightGBM 실험에서는 HyperOpt가 도출한 max_depth=115가 과도한 복잡
 
 <br>
 
->본 실험은 책 책 *『파이썬 머신러닝 완벽가이드』* 를 참고하며 진행하였으며, 책에서 제안된 하이퍼파라미터 튜닝 순서를 따르되 실험 결과를 바탕으로 어떤 조합이 실제 성능에 어떤 영향을 주는지를 실험하는 데 중점을 두었습니다.
+>본 실험은 책 *『파이썬 머신러닝 완벽가이드』* 를 참고하며 진행하였으며, 책에서 제안된 하이퍼파라미터 튜닝 순서를 따르되 실험 결과를 바탕으로 어떤 조합이 실제 성능에 어떤 영향을 주는지를 실험하는 데 중점을 두었습니다.
 
 <br>
