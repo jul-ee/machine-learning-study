@@ -2,7 +2,7 @@
 
 캐글 [Santander Customer Satisfaction](https://www.kaggle.com/competitions/santander-customer-satisfaction/data) 데이터를 기반으로
 
-하이퍼 파라미터 튜닝을 통해 XGBoost, LightGBM 모델의 성능을 개선하고, 최종적으로 ROC AUC 성능이 가장 높은 하이퍼 파라미터 조합을 도출하는 것을 목표로 진행하였습니다.
+하이퍼파라미터 튜닝을 통해 XGBoost, LightGBM 모델의 성능을 개선하고, 최종적으로 ROC AUC 성능이 가장 높은 하이퍼파라미터 조합을 도출하는 것을 목표로 진행하였습니다.
 
 > 실험 환경: &nbsp;Python, Scikit-learn, XGBoost, LightGBM, Jupyter Notebook
 
@@ -215,7 +215,7 @@ LGBMClassifier(
 
 ## 인사이트 및 회고
 
-이번 실험을 통해 하이퍼 파라미터가 모델 성능에 미치는 영향과 그 민감도를 확인할 수 있었다.
+이번 실험을 통해 하이퍼파라미터가 모델 성능에 미치는 영향과 그 민감도를 확인할 수 있었다.
 
 XGBoost 실험에서는 max_depth, min_child_weight, colsample_bytree, learning_rate와 같은 주요 파라미터를 변경할 때마다 ROC AUC 점수가 미세하게 변동되었고, 이 중 learning_rate=0.06 조합이 가장 높은 성능(0.8471)을 보여주었다. colsample_bytree와 같이 상대적으로 간과하기 쉬운 파라미터도 성능 향상에 유의미한 영향을 줄 수 있음을 확인하였다.
 
