@@ -4,6 +4,8 @@
 
 하이퍼파라미터 튜닝을 통해 XGBoost, LightGBM 모델의 성능을 개선하고, 최종적으로 ROC AUC 성능이 가장 높은 하이퍼파라미터 조합을 도출하는 것을 목표로 진행하였습니다.
 
+전처리 및 모델링 과정은 해당 repository 🔗[03_classification_santander](https://github.com/jul-ee/ml-model-practice/blob/main/machine_learning_study/03_classification_santander.ipynb) 노트북 파일에서 확인하실 수 있습니다.
+
 > 실험 환경: &nbsp;Python, Scikit-learn, XGBoost, LightGBM, Jupyter Notebook
 
 > 성능 기준: &nbsp;ROC AUC
@@ -18,7 +20,7 @@ XGBClassifier(n_estimators=500, learning_rate=0.05, eval_metric='auc')
 ```
 
 - 초기 ROC AUC: 0.8413
-- 기본 설정만으로도 높은 성능을 보였으나, 모델 복잡도 제어(max_depth, min_child_weight)와 데이터 불균형 대응을 통한 성능 개선의 여지가 있으므로 추가 실험이 필요하다.
+- 기본 설정만으로도 준수한 성능을 보였으나, 모델 복잡도 제어(max_depth, min_child_weight)와 데이터 불균형 대응을 통한 성능 개선의 여지가 있으므로 추가 실험이 필요하다.
 
 <br>
 
